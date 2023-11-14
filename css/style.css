@@ -61,7 +61,7 @@ nav .selected {
 
 /* Header - The Adventure in Neverland */
 #header {
-  background: linear-gradient(rgba(53, 79, 174, 0.348), rgba(8, 8, 8, 0.75)), url(https://github.com/AcidJxmmm/Treasure-Hunt/main/images/header-background.jpg);
+  background: linear-gradient(rgba(53, 79, 174, 0.348), rgba(8, 8, 8, 0.75)), url(https://github.com/AcidJxmmm/Treasure-Hunt/blob/main/images/header-background.jpg);
   background-size: cover;
   color: #fff;
 }
