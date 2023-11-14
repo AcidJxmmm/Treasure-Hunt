@@ -1,0 +1,723 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  padding: 10vh 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 3vmin;
+  overflow: hidden;
+  position: relative;
+}
+
+h1 {
+  font-family: 'Courgette', cursive;
+  font-size: 10vmin;
+}
+
+.author {
+  font-size: 4vmin;
+}
+
+div p {
+  margin: 1em 0;
+}
+
+html {
+  background-color: #999;
+  transition: background-color 1s;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 38vmin;
+  left: 2vmin;
+  z-index: 6;
+}
+
+nav a {
+  display: block;
+  width: 1.5vmin;
+  height: 1.5vmin;
+  margin-bottom: 2vmin;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+nav .selected {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+
+/* Header - The Adventure in Neverland */
+#header {
+  background: linear-gradient(rgba(53, 79, 174, 0.348), rgba(8, 8, 8, 0.75)), url(/images/header-background.jpg);
+  background-size: cover;
+  color: #fff;
+}
+
+#header h1 {
+  color: #f7ca42;
+  text-shadow: 0px 0px 5px rgba(240, 233, 197, 0.75);
+}
+
+#star01 {
+  width: 3vw;
+  position: absolute;
+  top: 17vh;
+  left: 7vw;
+
+  animation: star-glow 5s linear infinite;
+}
+
+#star02 {
+  width: 5vw;
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+
+  animation: star-glow 6s linear infinite;
+}
+
+@keyframes star-glow {
+  0% {
+    filter: drop-shadow(0px 0px 3px rgba(240, 233, 197, 0.75));
+  }
+
+  50% {
+    filter: drop-shadow(0px 0px 15px rgba(240, 233, 197, 0.75));
+  }
+
+  100% {
+    filter: drop-shadow(0px 0px 3px rgba(240, 233, 197, 0.75));
+  }
+}
+
+#logo {
+  width: 20vw;
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+}
+
+/* Section 1 - Map of Neverland */
+#section1 {
+  cursor: default;
+  background: #7fc3f0;
+  background-size: cover;
+}
+
+#section1 article {
+  width: 80vw;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 30% 70%;
+}
+
+#section1 h1 {
+  font-family: 'Courgette', cursive;
+  grid-area: 1/1;
+  padding-top: 15vh;
+}
+
+#section1 p {
+  font-family: 'Libre Baskerville', serif;
+  grid-area: 2/1;
+  padding-top: 20vh;
+}
+
+
+#section1 #map {
+  height: 110%;
+  grid-area: 1/2/span 2/ span 2;
+  position: flex;
+}
+
+#section1 #map-filter {
+  height: 110%;
+  grid-area: 1/2/span 2/ span 2;
+  position: flex;
+  z-index: +1;
+}
+
+#section1 #path,
+#ship,
+#skull,
+#treasure {
+  grid-area: 1/2/span 2/ span 2;
+}
+
+#section1 #path {
+  width: 73vh;
+  height: auto;
+  padding-top: 17vh;
+  padding-left: 10vw;
+}
+
+@media only screen and (max-width: 1366px) {
+  #section1 #path {
+    width: 73vh;
+    height: auto;
+    padding-top: 16.5vh;
+    padding-left: 10vw;
+  }
+}
+
+#section1 #ship {
+  width: 27vh;
+  padding-top: 14vh;
+  padding-left: 4vw;
+}
+
+#section1 #skull {
+  width: 32vw;
+  padding-top: 16vw;
+  padding-left: 40vh;
+}
+
+#section1 #treasure {
+  width: 44vw;
+  padding-top: 4vw;
+  padding-left: 57vh;
+}
+
+/* Section 2 - Fighting with pirates */
+#section2 {
+  background: #7fc3f0;
+  background-size: cover;
+  cursor: default;
+}
+
+#section2 h1 {
+  position: absolute;
+  top: 5vh;
+}
+
+#section2 #kid {
+  position: absolute;
+  height: 65vh;
+  animation: anim1 1s ease-out 1 forwards paused;
+}
+
+@keyframes anim1 {
+  0% {
+    transform: translateX(-80vw)
+  }
+  100% {
+    transform: translateX(-10vw)
+  }
+}
+
+#section2 #pirate {
+  position: absolute;
+  bottom: 1vw;
+  height: 80vh;
+  animation: anim2 1s ease-out 1 forwards paused;
+}
+
+@keyframes anim2 {
+  0% {
+    transform: translateX(50vw)
+  }
+  100% {
+    transform: translateX(10vw)
+  }
+}
+
+/* Section 3 - Stealing pirate ship */
+#section3 {
+  background: #7fc3f0;
+  background-size: cover;
+  cursor: default;
+}
+
+#section3 h1 {
+  position: absolute;
+  top: 5vh;
+}
+
+#section3 #cloud-frame1 {
+  position: absolute;
+  width: 110vw;
+  bottom: -7vh;
+}
+
+#section3 #cloud-frame2 {
+  position: absolute;
+  width: 110vw;
+  bottom: -2vh;
+  z-index: 2;
+}
+
+#section3 #lil-star1 {
+  width: 2.5vw;
+  height: 2.5vw;
+  position: absolute;
+  right: 0vw;
+  bottom: 10vh;
+  animation: star-rotate1 5s linear infinite;
+  z-index: 1;
+}
+
+@keyframes star-rotate1 {
+  0% {
+    transform: rotate(0) translateX(7vw) rotate(0);
+  }
+
+  100% {
+    transform: rotate(-360deg) translateX(7vw) rotate(-360deg);
+  }
+}
+
+#section3 #lil-star2 {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  left: 9vw;
+  bottom: 9vh;
+  animation: star-rotate2 5s 4s linear infinite;
+  z-index: 1;
+}
+
+@keyframes star-rotate2 {
+  0% {
+    transform: rotate(0) translateX(10vw) rotate(0);
+  }
+
+  100% {
+    transform: rotate(-360deg) translateX(10vw) rotate(-360deg);
+  }
+}
+
+#section3 #lil-star3 {
+  width: 6vw;
+  height: 6vw;
+  position: absolute;
+  left: 22vw;
+  bottom: -5vh;
+  animation: star-rotate3 5s 5s linear infinite;
+  z-index: 2;
+}
+
+@keyframes star-rotate3 {
+  0% {
+    transform: rotate(0) translateX(12vw) rotate(0);
+  }
+
+  100% {
+    transform: rotate(-360deg) translateX(12vw) rotate(-360deg);
+  }
+}
+
+#section3 #lil-star4 {
+  width: 6vw;
+  height: 6vw;
+  position: absolute;
+  right: 15vw;
+  bottom: -5vh;
+  animation: star-rotate4 5s 2s linear infinite;
+  z-index: 2;
+}
+
+@keyframes star-rotate4 {
+  0% {
+    transform: rotate(0) translateX(12vw) rotate(0);
+  }
+
+  100% {
+    transform: rotate(-360deg) translateX(12vw) rotate(-360deg);
+  }
+}
+
+#section3 #boat {
+  height: 74vh;
+  position: absolute;
+  top: 15vh;
+  z-index: 0;
+  right: 27vw;
+}
+
+#section3 #bling1 {
+  height: 12vh;
+  position: absolute;
+  bottom: 50vh;
+  right: 10vw;
+  z-index: 0;
+  animation: bling 5s linear infinite;
+}
+
+#section3 #bling2 {
+  height: 10vh;
+  position: absolute;
+  top: 30vh;
+  left: 15vw;
+  z-index: 0;
+  animation: bling 3s linear infinite;
+}
+
+
+@keyframes bling {
+  0% {
+    transform: scale()
+  }
+  50% {
+    transform: scale(0.5)
+  }
+  100% {
+    transform: scale()
+  }
+}
+
+#section3 #bling3 {
+  height: 11vh;
+  position: absolute;
+  top: 47vh;
+  left: 8vw;
+  z-index: 0;
+  animation: bling2 5s 1s linear infinite;
+}
+
+#section3 #bling4 {
+  height: 10vh;
+  position: absolute;
+  top: 23vh;
+  right: 24vw;
+  z-index: 0;
+  animation: bling2 5s linear infinite;
+}
+
+@keyframes bling2 {
+  0% {
+    transform: scale()
+  }
+  50% {
+    transform: scale(0.7)
+  }
+  100% {
+    transform: scale()
+  }
+}
+
+/* Section 4 - Stealing pirate ship */
+#section4 {
+  cursor: default;
+}
+
+#section4 h1 {
+  position: absolute;
+  top: 45vh;
+  right: 29vw;
+  z-index: 2;
+}
+
+#section4 #cloud-frame3 {
+  position: absolute;
+  width: 115vw;
+  top: -26vh;
+  z-index: 1;
+}
+
+#section4 #mountain1 {
+  position: absolute;
+  width: 100vw;
+  bottom: -3vh;
+  z-index: 4;
+  animation: mountain1 3s ease-out 1 forwards paused;
+}
+
+@keyframes mountain1 {
+  0% {
+    transform: translateY(10vh)
+  }
+  100% {
+    transform: translateY(-16vh)
+  }
+}
+
+#section4 #mountain2 {
+  position: absolute;
+  width: 100vw;
+  bottom: -3vh;
+  z-index: 3;
+  animation: mountain2 3s ease-out 1 forwards paused;
+}
+
+@keyframes mountain2 {
+  0% {
+    transform: translateY(14vh)
+  }
+  100% {
+    transform: translateY(-27vh)
+  }
+}
+
+#section4 #mountain3 {
+  position: absolute;
+  width: 100vw;
+  left: -15vw;
+  bottom: 10vh;
+  z-index: 1;
+  animation: mountain3 2s ease-out 1 forwards paused;
+}
+
+@keyframes mountain3 {
+  0% {
+    transform: translateX(-20vw)
+  }
+  100% {
+    transform: translateX(86vw)
+  }
+}
+
+#section4 #mountain4 {
+  position: absolute;
+  width: 100vw;
+  right: 5vw;
+  bottom: 6vh;
+  z-index: 2;
+  animation: mountain4 1s ease-out 1 forwards paused;
+}
+
+@keyframes mountain4 {
+  0% {
+    transform: translateX(-32vw)
+  }
+  100% {
+    transform: translateX(77vw)
+  }
+}
+
+#section4 #background {
+  position: absolute;
+  width: 100vw;
+  top: 0vw;
+}
+
+/* Section 5 - Stealing pirate ship */
+#section5 {
+  background-image: url("/images/background2.jpg");
+  background-size: cover;
+  z-index: -1;
+}
+
+#section5 h1 {
+  position: absolute;
+  top: 5vh;
+}
+
+#section5 #bling1 {
+  height: 6vh;
+  position: absolute;
+  bottom: 16vh;
+  transform: rotate(20deg);
+  left: 4vw;
+  animation: bling2 3s linear infinite;
+}
+
+#section5 #bling2 {
+  height: 6vh;
+  position: absolute;
+  transform: rotate(-20deg);
+  bottom: 46vh;
+  left: 21vw;
+  animation: bling2 3s 2s linear infinite;
+}
+
+#section5 #bling3 {
+  height: 9vh;
+  position: absolute;
+  transform: rotate(30deg);
+  bottom: 49vh;
+  left: 36vw;
+  animation: bling2 3s 1s linear infinite;
+}
+
+#section5 #bling4 {
+  height: 8vh;
+  position: absolute;
+  transform: rotate(-20deg);
+  bottom: 18vh;
+  right: 10vw;
+  animation: bling2 3s 1s linear infinite;
+}
+
+#section5 #bling5 {
+  height: 6vh;
+  position: absolute;
+  transform: rotate(-20deg);
+  bottom: 4vh;
+  right: 56vw;
+  animation: bling2 3s 2s linear infinite;
+}
+
+#section5 #bling6 {
+  height: 7vh;
+  position: absolute;
+  transform: rotate(20deg);
+  bottom: 39vh;
+  right: 18vw;
+  animation: bling2 3s linear infinite;
+}
+
+#section5 #bling7 {
+  height: 7vh;
+  position: absolute;
+  transform: rotate(10deg);
+  bottom: 41vh;
+  right: 4vw;
+  animation: bling2 3s 1s linear infinite;
+}
+
+#section5 #bling8 {
+  height: 10vh;
+  position: absolute;
+  transform: rotate(20deg);
+  bottom: 33vh;
+  right: 36vw;
+  animation: bling2 3s linear infinite;
+}
+
+@keyframes bling2 {
+  0% {
+    transform: scale()
+  }
+  50% {
+    transform: scale(0.7)
+  }
+  100% {
+    transform: scale()
+  }
+}
+
+
+/* Flashlight Overlay */
+:root {
+  cursor: none;
+  --cursorX: 50vw;
+  --cursorY: 50vh;
+}
+
+:root:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  pointer-events: none;
+  background: radial-gradient(circle 13vmax at var(--cursorX) var(--cursorY),
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, .5) 80%,
+      rgb(3, 47, 35) 100%)
+}
+
+/* Input Form - Peter and Wendy */
+#form {
+  background-color:  rgb(3, 47, 35);
+  color: rgb(0, 0, 0);
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.5vh;
+  line-height: 1.6;
+  justify-content: center;
+  cursor: default;
+}
+
+#form #scroll{
+  z-index: 1;
+  height: 95vh;
+}
+
+#userForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30vw;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  z-index: 3;
+}
+
+#userForm input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  outline: none;
+  background: transparent;
+}
+
+#error {
+  border: 2px solid #f00;
+  background-color: #fcc;
+  padding: 10px;
+  border-radius: 5px;
+  /* hide the error  */
+  visibility: hidden;
+  /* set the animation start state */
+  padding: 0px 10px;
+  max-height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 2;
+}
+
+#error.show {
+  /* show the error */
+  visibility: visible;
+  /* set the animation end state */
+  padding-top: 10px;
+  padding-bottom: 35px;
+  height: 100vh;
+  opacity: 1;
+  z-index: 2;
+  transition: 0.5s;
+  text-align: center;
+}
+
+input,
+textarea,
+button {
+  font-family: sans-serif;
+  font-size: 18px;
+  vertical-align: middle;
+  z-index: 2;
+}
+
+#message {
+  width: 100%;
+  height: 5em;
+  z-index: 2;
+}
+
+#remaining {
+  font-size: 14px;
+  font-style: italic;
+  color: #888;
+  z-index: 2;
+}
+
+#userForm button {
+  font: inherit;
+	font-size: 3vh;
+	padding: 1em;
+	width: 100%;
+	font-weight: 500;
+	background-color: #299117;
+	border-radius: 6px;
+	color: #FFF;
+	border: 0;
+}

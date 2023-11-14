@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peter and Wendy</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" media="screen" href="css/style.css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="shortcut icon" type="image/jpg" href="images/logo-ico.jpg" / </head>
+
+<body>
+  <nav>
+    <a href="#header" class="selected"></a>
+    <a href="#section1"></a>
+    <a href="#section2"></a>
+    <a href="#section3"></a>
+    <a href="#section4"></a>
+    <a href="#section5"></a>
+    <a href="#form"></a>
+  </nav>
+
+  <section id="header">
+    <h1 data-aos="fade-up">Treasure Hunt in Neverland</h1>
+    <img id="star01" src="images/star01.png" data-aos="zoom-in" />
+    <img id="star02" src="images/star02.png" data-aos="zoom-in" />
+    <img id="logo" src="images/full-logo.png" />
+  </section>
+
+  <section id="section1">
+    <article>
+      <h1 data-aos="fade-down">Map of Neverland</h1>
+      <img id="map-filter" src="images/map-filter.png" data-aos="fade-down" data-aos-anchor-placement="top-center" />
+      <img id="map" src="images/map.png" data-aos="fade-down" data-aos-anchor-placement="top-center" />
+      <p data-aos="fade-up">The Lost Boys just found a treasure map from Captain Hook's ship. However, the Lost Boy 
+        don't have any tools for looting the treasure. 
+        <br>
+        <br>
+        Let's see what they are gonna do.
+      </p>
+
+      <canvas id="path" data-aos="fade-down" data-aos-delay="400" data-aos-easing="ease-in-back"></canvas>
+      <canvas id="skull" data-aos="fade-down" data-aos-delay="800" data-aos-easing="ease-in-back"></canvas>
+      <canvas id="ship" data-aos="fade-down" data-aos-delay="600" data-aos-easing="ease-in-back"></canvas>
+      <canvas id="treasure" data-aos="fade-down" data-aos-delay="400" data-aos-easing="ease-in-back"></canvas>
+    </article>
+  </section>
+
+  <section id="section2">
+    <h1 data-aos="fade-down">Fighting with pirates</h1>
+    <canvas id="kid" width="600" height="600"></canvas>
+    <canvas id="pirate" width="700" height="700"></canvas>
+  </section>
+
+  <section id="section3">
+    <h1 data-aos="fade-down">...And Stealing Pirate's Ship</h1>
+    <canvas id="boat" width="600" height="600"></canvas>
+    <img id="cloud-frame1" src="images/could-frame1.png"/>
+    <img id="cloud-frame2" src="images/cloud-frame2.png"/>
+    <img id="lil-star1" src="images/little-star1.png"/>
+    <img id="lil-star2" src="images/little-star1.png"/>
+    <img id="lil-star3" src="images/little-star2.png"/>
+    <img id="lil-star4" src="images/little-star2.png"/>
+    <img id="bling1" src="images/bling.png"/>
+    <img id="bling2" src="images/bling.png"/>
+    <img id="bling3" src="images/bling2.png"/>
+    <img id="bling4" src="images/bling2.png"/>
+  </section>
+
+  <section id="section4">
+    <img id="cloud-frame3" src="images/cloud-frame3.png"/>
+    <h1>Treasure Time</h1>
+    <img id="mountain1" src="images/mountain1.png">
+    <img id="mountain2" src="images/mountain2.png">
+    <img id="mountain3" src="images/mountain3.png">
+    <img id="mountain4" src="images/mountain4.png">
+    <img id="background" src="images/background.png">
+  </section>
+
+  <section id="section5">
+    <img id="bling1" src="images/bling3.png"/>
+    <img id="bling2" src="images/bling3.png"/>
+    <img id="bling3" src="images/bling3.png"/>
+    <img id="bling4" src="images/bling3.png"/>
+    <img id="bling5" src="images/bling3.png"/>
+    <img id="bling6" src="images/bling3.png"/>
+    <img id="bling7" src="images/bling3.png"/>
+    <img id="bling8" src="images/bling3.png"/>
+  </section>
+
+  <section id="form">
+    <form action="" id="userForm">
+      <div id="error">You must enter your name.</div>
+
+      <div class="user-box">
+        <label for="username">Your name:</label>
+        <input type="text" id="username" />
+      </div>
+
+      <div class="user-box">
+        <label for="age">Your age:</label>
+        <input type="number" id="age" min="1" max="100"/>
+      </div>
+
+      <div class="user-box">
+        <label for="message">Leave a message:</label><br />
+        <textarea id="message" placeholder="Say something!" maxlength="140"></textarea><br />
+        <output id="remainingOutput">140 characters left</output>
+      </div>
+      <br>
+      <p>
+        <button type="submit">Submit Form</button>
+      </p>
+    </form>
+
+    <img id="scroll" src="images/scroll.png">
+
+  </section>
+
+  <script src="https://unpkg.com/@rive-app/canvas"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
