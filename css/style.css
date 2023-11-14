@@ -61,7 +61,7 @@ nav .selected {
 
 /* Header - The Adventure in Neverland */
 #header {
-  background: linear-gradient(rgba(53, 79, 174, 0.348), rgba(8, 8, 8, 0.75)), url(https://github.com/AcidJxmmm/Treasure-Hunt/blob/main/images/header-background.jpg);
+  background: linear-gradient(rgba(53, 79, 174, 0.348), rgba(8, 8, 8, 0.75)), url("/images/header-background.png");
   background-size: cover;
   color: #fff;
 }
@@ -506,7 +506,7 @@ nav .selected {
 
 /* Section 5 - Stealing pirate ship */
 #section5 {
-  background-image: url("/images/background2.jpg");
+  background-image: url("/images/background2.png");
   background-size: cover;
   z-index: -1;
 }
